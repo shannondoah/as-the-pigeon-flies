@@ -1,0 +1,29 @@
+#main
+  .container
+    .content
+      %h2.title.top as the
+      %h2.title.caps PIGEON
+      %h2.title flies
+      .description
+        %hr
+        %p
+          Do you ever feel like this crazy world is just moving
+          %strong too fast?
+        %p
+          Do you ever wish there was something you could do to
+          %strong slow things down?
+
+        %p Use our app to roll back the expeditious pace of life by sending your text message at intervals of one letter per minute. Type the full message you wish to send below, and we will take care of the rest. It will remind your recipient of simpler times and above all else, that patience is a virtue.
+
+        = form_tag messages_path, method: :post do
+          .form-field
+            = label_tag "to", "Recipient phone:"
+            = text_field_tag "to", "", placeholder: "Ex: 604-XXX-XXXX"
+          .form-field
+            = label_tag "message", "Message:"
+            = text_area_tag "message", "", placeholder: "Your message here"
+          .form-field
+            = button_tag(type: "submit") do
+              .button-text Send
+
+

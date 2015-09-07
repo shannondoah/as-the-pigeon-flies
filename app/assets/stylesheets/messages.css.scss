@@ -1,0 +1,121 @@
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+$darkgrey: #3a3a3a;
+$lightgrey: #efefef;
+
+body.bg-img {
+  background-image: url('fast_pigeon.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+
+  .title {
+    font-family: 'Architects Daughter', cursive;
+    margin: -12px;
+    color: $darkgrey;
+
+    &.top { padding-top: 12px; }
+    &.caps { font-size: 4em; }
+  }
+}
+
+#main {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .container {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 2;
+
+    .content {
+      width: 95%;
+      max-width: 380px;
+      margin: 15px auto;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      background-color:rgba(255,255,255,0.7);
+
+      .description {
+        padding: 30px 30px 10px 30px;
+
+        hr {
+          border: none;
+          border-top: 1px solid #777;
+        }
+
+        p, label {
+          color: $darkgrey;
+          font-family: 'Lato', sans-serif;
+          font-weight: 200;
+        }
+
+        .form-field {
+          text-align: left;
+          padding-bottom: 10px;
+
+          label {
+            padding-bottom: 5px;
+            font-size: 12px;
+          }
+
+          input, textarea {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            min-height: 30px;
+            border: 1px solid $lightgrey;
+            border-radius: 5px;
+            padding-left: 5px;
+
+            &:focus {
+              outline: none;
+              border: 1px dashed #a3a3a3;
+            }
+
+            &:hover { box-shadow: 0 5px 5px rgba(0,0,0,0.2); }
+          }
+
+          textarea {
+            min-height: 60px;
+          }
+
+          button {
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            margin-top: 10px;
+
+            .button-text {
+              padding: 10px 10px 10px 10px;
+              font-family: 'Lato', sans-serif;
+              font-size: 15px;
+              color: #a3a3a3;
+            }
+
+            &:focus { outline: none; }
+
+            &:hover {
+              border: 1px solid $lightgrey;
+              box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+              .button-text { color: $darkgrey; }
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}

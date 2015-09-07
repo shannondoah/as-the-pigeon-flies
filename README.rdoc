@@ -1,0 +1,14 @@
+== As the Pigeon Flies
+
+Simple app just to test out how Twilio works and integrates with Rails. Also experimented with ruby threads and a little bit of front end work. Nothing exceptionally robust but a fun way to pass a morning and maybe troll a few friends.
+
+The user enters a message into a form, and the text is sent to the recipient phone number at a rate of one letter per minute. For added trolling fun, send to a landline.
+
+Versions used:
+
+* Ruby 2.0
+
+* Rails 4.2
+
+* Twilio-Ruby 4.2.1
+
